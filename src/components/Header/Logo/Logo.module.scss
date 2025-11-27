@@ -1,0 +1,27 @@
+.logoWrapper {
+  width: 100%;
+
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    .logoImage {
+      max-width: none !important;
+      width: 100px;
+      height: 100px;
+      object-fit: scale-down;
+
+      @media (min-width: 500px) {
+        width: 140px;
+        height: 120px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    flex: 0 1 0;
+  }
+}

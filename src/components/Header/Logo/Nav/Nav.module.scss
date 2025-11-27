@@ -1,0 +1,160 @@
+.nav {
+  position: relative;
+  width: 100%;
+  padding: 16px 0;
+  justify-content: flex-end;
+
+  z-index: 1000;
+
+  position: absolute;
+  top: 132px;
+  right: 0;
+
+  .navList {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+
+      width: 100%;
+      margin: 0 auto;
+
+      transition: all ease-in-out 0.2s;
+
+      & > li > a {
+        color: white;
+        font-weight: bolder;
+        font-size: 0.8rem;
+
+        &:hover {
+          color: rgb(190, 148, 88);
+        }
+      }
+    }
+  }
+
+  // MOBILE NAV
+  .mobileNav {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 12px;
+
+    // hide on desktop
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    .hamburger {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 48px;
+      height: 32px;
+      padding: 4px;
+      margin: 2px 16px;
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+      -webkit-tap-highlight-color: transparent;
+      align-items: center;
+      z-index: 2000;
+
+      .hamburgerBar {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        border-radius: 3px;
+        transition: transform 240ms cubic-bezier(0.2, 0.8, 0.2, 1),
+          opacity 180ms, background 180ms;
+        transform-origin: center;
+      }
+    }
+
+    .mobileMenu {
+      display: flex;
+      flex-direction: column;
+      gap: 148px;
+
+      width: 100%;
+      height: 100dvh;
+
+      position: absolute;
+      top: -32px;
+      left: 0;
+
+      background-color: black;
+
+      ul {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 124px;
+
+        li > a {
+          color: white;
+          font-size: 1.25rem;
+          font-weight: 600;
+          letter-spacing: 1px;
+        }
+      }
+
+      @media (min-width: 500px) {
+        top: -12px;
+      }
+
+      .mobileDetails {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+
+        color: white;
+
+        .mobileContact {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+
+          @media (min-width: 500px) {
+            text-align: left;
+          }
+        }
+
+        .mobileSocials {
+          display: flex;
+          gap: 12px;
+
+          svg {
+            cursor: pointer;
+            background-color: rgb(190, 148, 88);
+            padding: 2px;
+            border-radius: 2px;
+            font-size: 1.35rem;
+            transition: all ease-in-out .2s;
+
+            &:hover {
+              color: rgb(190, 148, 88);
+              background-color: white;
+            }
+          }
+
+          @media (min-width: 500px) {
+            flex-direction: column;
+          }
+        }
+
+        @media (min-width: 500px) {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+}

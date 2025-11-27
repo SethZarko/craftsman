@@ -1,0 +1,19 @@
+.header {
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(190, 148, 88);
+
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 4px 0;
+
+  @media (min-width: 768px) {
+    background-color: white;
+    padding: 4px 8px 4px;
+  }
+}

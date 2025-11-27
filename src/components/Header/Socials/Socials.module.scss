@@ -1,0 +1,16 @@
+.socialsWrapper {
+  display: none;
+
+  margin-left: 48px;
+
+  svg {
+    cursor: pointer;
+  }
+
+  @media(min-width: 768px) {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1 1 0;
+  }
+}

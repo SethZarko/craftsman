@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   reactStrictMode: true,
+  images: {
+    qualities: [70, 75, 80]
+  },
 };
 
 export default nextConfig;

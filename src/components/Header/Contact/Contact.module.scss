@@ -1,0 +1,62 @@
+.contactWrapper {
+  display: none;
+
+  margin-right: 48px;
+
+  .contactContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    span {
+      display: none;
+    }
+
+    @media (min-width: 1200px) {
+      span {
+        display: block;
+        font-weight: bolder;
+        letter-spacing: 0.15px;
+        font-size: 0.7rem;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
+    flex: 1 1 0;
+  }
+}
+
+.contactBtn {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    background-color: rgb(190, 148, 88);
+    border: solid 1px white;
+    border-radius: 0;
+    padding: 12px 48px;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+
+    &:hover {
+      background-color: white;
+      border: solid 1px rgb(190, 148, 88);
+    }
+
+    &:hover .contactLink {
+      color: rgb(190, 148, 88);
+    }
+
+    .contactLink {
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+  }
+}
